@@ -18,5 +18,10 @@ pipeline {
        echo 'Deploy successful'
        }
     }
+ post {
+   success {
+mail bcc: '', body: 'Build success or failure', cc: '', from: '', replyTo: '', subject: 'Build status', to: 'shivacheera@gmail.com'
+}
+}
 }
 }
